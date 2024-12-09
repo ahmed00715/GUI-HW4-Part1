@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Multiplication Table</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include jQuery and Validation Plugin -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Dynamic Multiplication Table Generator</h1>
+        <!-- Form Section -->
+        <form id="tableForm" class="input-form">
+            <div class="form-group">
+                <label for="multiplierStart">Minimum Row Value:</label>
+                <!-- Placeholder added to guide the user -->
+                <input type="number" id="multiplierStart" name="multiplierStart" 
+                    placeholder="Enter minimum row value (-50 to 50)" required>
+            </div>
+            <div class="form-group">
+                <label for="multiplierEnd">Maximum Row Value:</label>
+                <input type="number" id="multiplierEnd" name="multiplierEnd" 
+                    placeholder="Enter maximum row value (-50 to 50)" required>
+            </div>
+            <div class="form-group">
+                <label for="multiplicandStart">Minimum Column Value:</label>
+                <input type="number" id="multiplicandStart" name="multiplicandStart" 
+                    placeholder="Enter minimum column value (-50 to 50)" required>
+            </div>
+            <div class="form-group">
+                <label for="multiplicandEnd">Maximum Column Value:</label>
+                <input type="number" id="multiplicandEnd" name="multiplicandEnd" 
+                    placeholder="Enter maximum column value (-50 to 50)" required>
+            </div>
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Generate Table</button>
+        </form>
+        <!-- Error Message Container -->
+        <div id="errorMessage" class="error-message"></div>
+        <!-- Table Display -->
+        <div id="tableContainer" class="table-container">
+            <table id="multiplicationTable"></table>
+        </div>
+    </div>
+</body>
+</html>
